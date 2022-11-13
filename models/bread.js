@@ -7,7 +7,7 @@ const { Schema } = mongoose
 const breadSchema = new Schema({
     name: { type: String, required: true },
     hasGluten: Boolean,
-    image: { type: String, default: 'http://placehold.it/500x500.png' }
+    image: { type: String, default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxyOZAxpJjXRTRJMEYHA7iaQrQs3gfZj9J9uU6PTZjhFfrAjxL9H6eyU3xNQ_a3L8MVbg&usqp=CAU' }
 })
 
 // model and export 
