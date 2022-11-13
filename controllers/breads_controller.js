@@ -14,22 +14,20 @@ breads.get('/', (req, res) => {
       })
 })
 
+// SHOW ROUTE
+breads.get('/:id', (req, res) => {
+  Bread.findById(req.params.id)
+      .then(foundBread => {
+        const bakedBy = foundBread.getBakedBy() 
+        res.render('show', {
+            bread: foundBread
+        })
+      })
+    })
+
 // NEW
 breads.get('/new', (req, res) => {
   res.render('new')
-})
-
-//ID
-breads.get('/:id', (req, res) => {
-  Bread.findById(req.params.id)
-    .then(foundBread => {
-      res.render('show', {
-        bread: foundBread
-      })
-    })
-    .catch(err => {
-      res.send('404')
-    })
 })
 
 // EDIT
@@ -42,18 +40,7 @@ breads.get('/:id/edit', (req, res) => {
     })
 })
 
-// SHOW ROUTE
-breads.get('/:arrayIndex', (req, res) => {
-  if (Bread[req.params.arrayIndex]) {
-    res.render('Show', {
-      bread:Bread[req.params.arrayIndex],
-      index: req.params.arrayIndex,
-    })
-  } else {
-    res.send('404 - breads')
-  }
-})
-
+//DATA SEED 
 breads.get('/data/seed', (req, res) => {
   Bread.insertMany([
     {
