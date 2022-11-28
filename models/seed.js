@@ -22,4 +22,5 @@ const Seed =
     }
   ]
 
-  module.exports = Seed
+module.exports = Seed
+
