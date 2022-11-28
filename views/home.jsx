@@ -7,7 +7,7 @@ function home () {
           <main>
               <h1 className='pt-2'>HOME</h1>
               <div>
-                <img src="/images/french.png" alt="bread"/>
+                <img src="/images/french.png" alt="breads"/>
               </div>
               <div className='pb-3'>
                 <a href="/breads">
