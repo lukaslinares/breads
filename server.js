@@ -21,7 +21,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 // ROUTES
 app.get('/', (req, res) => {
-  res.send('home')
+  res.render('home')
 })
 
 // breads
